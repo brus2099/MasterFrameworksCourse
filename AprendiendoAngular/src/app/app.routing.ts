@@ -20,6 +20,7 @@ const appRoutes: Routes = [
     {path: 'formulario', component: FormularioComponent},
     {path: 'musica', component: MusicaComponent},
     {path: 'pruebas-pagina', component: PaginaComponent},
+    {path: 'pruebas-pagina/:nombre/:apellidos', component: PaginaComponent},
     {path: '**', component: ErrorComponent}
 ];
 
