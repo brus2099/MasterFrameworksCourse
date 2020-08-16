@@ -7,5 +7,5 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
   title = 'Blog de brus';
-  public homeText = 'Bienvenido a mi nuevo blog.'
+  public homeText = 'Bienvenido a mi nuevo blog.';
 }
