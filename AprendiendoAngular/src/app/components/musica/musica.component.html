@@ -1,62 +1,64 @@
-<app-slider [nombre]="'Sección de Musica.'"></app-slider>
+<app-slider [nombre]="'Sección de Musica.'" [size]="'small'"></app-slider>
 
 <div class="center">
 
     <section id="content">
+
+        <div id="favorita"*ngIf="favorita">
+            
+            <h2 class="subheader">
+                Cancion favorita
+            </h2>
+            <h4>{{favorita.title | uppercase}}</h4>
+            <p>{{favorita.test | lowercase}}</p>
+            <p>{{favorita.year | espar}}</p>
+            <p>{{this.fechaTest | date:'full'}}</p>
+            <p>{{this.fechaTest | date:'short'}}</p>
+            <p>{{this.fechaTest | date:'fullDate'}}</p>
+            <p>{{this.fechaTest | date:'dd/MM/yyyy'}}</p>
+        </div>
+
         <h1 class="subheader">Musica</h1>
 
+
+        <!-- Extra
         <h2>{{titulo}}</h2>
         <button (click)="cambiarTitulo()">Pulsame</button>
 
         <hr>
 
-        <h2>Mostrar primera pelicula</h2>
-        {{peliculas[0].title}}
+        <h2>Mostrar primera cancion</h2>
+        {{canciones[0].title}}
 
         <hr>
 
-        <h2>Numero de peliculas</h2>
+        <h2>Numero de canciones</h2>
 
-        <div *ngIf="peliculas.length <= 3">
-            Hay pocas peliculas
+        <div *ngIf="canciones.length <= 3">
+            Hay pocas canciones
         </div>
 
-        <div *ngIf="peliculas.length > 3">
-            Hay muchas peliculas
+        <div *ngIf="canciones.length > 3">
+            Hay muchas canciones
         </div>
 
 
-        {{peliculas.length}}
+        {{canciones.length}}
 
         <hr>
 
         <h2 class="subheader">Lista de peliculas</h2>
-        <div id="articles" *ngIf="peliculas">
-            <article class="article-item" *ngFor="let pelicula of peliculas; let i = index;">
+        -->
 
-                <div class="image-wrap">
-                    <img src="{{pelicula.image}}" alt="pelicula.title">
-                </div>
 
-                <h2>{{pelicula.title}}</h2>
-                <span class="date">
-                    Hace 5 minutos
-                </span>
-
-                <!-- 
-        [class.year-green]="pelicula.year > 2016" 
-        [class.year-red]="pelicula.year <= 2016" -->
-                <span class="year" [ngClass]="{
-                               'year-green': pelicula.year > 2016,
-                               'year-red': pelicula.year <= 2016
-                           }">
-                    {{pelicula.year}}
-                </span>
-
-                <a href="article.html">Leer más</a>
-                <div class="clearfix"></div>
-            </article>
+        <div id="articles" *ngIf="canciones">
             <!-- Añadir articulos JS -->
+            <div *ngFor="let cancion of canciones; let i = index;">
+                <app-cancion
+                    [cancion]="cancion"
+                    (marcarFavorita)="mostrarFavorita($event)"
+                ></app-cancion>
+            </div>
         </div>
 
     </section>

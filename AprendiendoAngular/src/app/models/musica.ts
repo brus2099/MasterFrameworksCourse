@@ -11,10 +11,11 @@ export class Musica {
     }
     */
 
-    constructor(
-        public title: string,
-        public year: number,
-        public image: string
+   constructor(
+       public title: string,
+       public year: number,
+       public image: string,
+       public test: string
     ) {
                 
     }

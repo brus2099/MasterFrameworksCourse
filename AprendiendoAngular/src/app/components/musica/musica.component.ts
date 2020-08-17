@@ -1,28 +1,34 @@
 import { Component, OnInit, DoCheck, OnDestroy } from '@angular/core';
 import { Musica } from '../../models/musica'
+import { CancionService } from '../../services/cancion.service'
 
 @Component({
   selector: 'app-musica',
   templateUrl: './musica.component.html',
-  styleUrls: ['./musica.component.css']
+  styleUrls: ['./musica.component.css'],
+  providers: [CancionService]
 })
 export class MusicaComponent implements OnInit, DoCheck {
 
   public titulo: string;
-  public peliculas: Musica[];
+  public canciones: Musica[];
+  public favorita: Musica;
+  public fechaTest: any;
 
-  constructor() { 
-    this.titulo = 'Soy el componente musica'
-    this.peliculas = [
-      new Musica("Spiderman 4", 2020, "https://cnet1.cbsistatic.com/img/IhYCIh0bqjMG8R5K7Lys0opUhyg=/1200x675/2020/06/11/03fe8492-a134-4702-af78-ca2d2ad61f3a/spider-man-miles-morales-01.jpg"),
-      new Musica("Endgame", 2019, 'https://cnet1.cbsistatic.com/img/IhYCIh0bqjMG8R5K7Lys0opUhyg=/1200x675/2020/06/11/03fe8492-a134-4702-af78-ca2d2ad61f3a/spider-man-miles-morales-01.jpg'),
-      new Musica("Interstellar", 2014, 'https://hipertextual.com/files/2014/11/interstellar1-scaled.jpg')
-    ]
+  constructor(
+    private _cancionService: CancionService
+  ) { 
+    this.titulo = 'Soy el componente musica';
+    this.canciones = this._cancionService.getCanciones();
+
+    this.fechaTest = new Date(2020, 8, 12);
+
   }
 
   ngOnInit(): void {
-    console.log(this.peliculas)
+    console.log(this.canciones)
     console.log('evento onInit del componente');
+    console.log(this._cancionService.holaMundo());
   }
 
   ngDoCheck() {
@@ -35,6 +41,10 @@ export class MusicaComponent implements OnInit, DoCheck {
 
   ngOnDestroy(){
     console.log('el componente se va a eliminar de la ejecucion')
+  }
+
+  mostrarFavorita(event) {
+    this.favorita = event.cancion;
   }
 
 }

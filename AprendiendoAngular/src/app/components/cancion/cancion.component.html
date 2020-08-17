@@ -1,0 +1,31 @@
+<article class="article-item">
+
+    <div class="image-wrap">
+        <img src="{{cancion.image}}" alt="cancion.title">
+    </div>
+
+    <h2>{{cancion.test}} - {{cancion.title}}</h2>
+    <span class="date">
+        Hace 5 minutos
+    </span>
+
+    <a href="article.html">Leer más</a>
+
+
+    <!-- 
+        [class.year-green]="pelicula.year > 2016" 
+        [class.year-red]="pelicula.year <= 2016" -->
+    <span class="year" [ngClass]="{
+            'year-green': cancion.year > 2016,
+            'year-red': cancion.year <= 2016
+        }">
+        {{cancion.year}}
+    </span>
+
+    <button class="btn btn-success" style="font-size: 12px; margin-top: 15px;" (click)="seleccionar($event, cancion)">
+        Seleccionar como favorita
+    </button>
+
+
+    <div class="clearfix"></div>
+</article>
