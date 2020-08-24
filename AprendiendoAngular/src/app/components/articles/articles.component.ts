@@ -19,7 +19,8 @@ export class ArticlesComponent implements OnInit {
 
   }
 
-  ngOnInit(): void {
+  ngOnInit() {
+    console.log(this.articles)
   }
 
 }

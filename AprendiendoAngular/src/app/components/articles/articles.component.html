@@ -1,6 +1,12 @@
 <div class="loading" *ngIf="!articles">
+    <img src="../../../assets/images/load.gif" alt="Cargando" style="width: 50px;">
     <p>Cargando...</p>
-    <img src="../../../assets/images/load.gif" alt="Cargando" style="width: 60px;">
+</div>
+
+<div class="loading" *ngIf="articles && articles.length == 0">
+    <img src="../../../assets/images/lupa.png" alt="Cargando" style="width: 80px;">
+    <p>No hay articulos relacionados.</p>
+    <p>Intenta una nueva busqueda.</p>
 </div>
 
 <div id="articles" *ngIf="articles">
