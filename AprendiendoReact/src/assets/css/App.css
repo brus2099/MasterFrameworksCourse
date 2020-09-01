@@ -87,7 +87,11 @@ body {
 }
 
 #menu a:hover {
-  color: #8B85C1;
+  color: rgba(0,212,255,1) ;
+}
+
+.active {
+  border-bottom: 2px solid rgba(0,212,255,1);
 }
 
 #slider {

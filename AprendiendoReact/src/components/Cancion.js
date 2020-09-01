@@ -19,9 +19,9 @@ class Cancion extends Component {
                 <span className="date">
                     {año}
                 </span>
-                <a href="article.html">Leer más</a>
+                <a href="article.html">Ver en Spotify</a>
                 <button onClick={this.marcar}>
-                    Marcar como favorita
+                    Solicitar en cola
                 </button>
                 <div className="clearfix"></div>
             </article>
