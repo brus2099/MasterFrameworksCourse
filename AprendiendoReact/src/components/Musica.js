@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import Cancion from './Cancion'
-import Slider from './Slider'
 import Sidebar from './Sidebar'
 
 class Musica extends Component {

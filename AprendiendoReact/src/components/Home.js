@@ -10,12 +10,12 @@ class Home extends Component {
         return (
             <div id="home">
                 <Slider
-                    title="Bienvenido a mi ejercicio de practica."
+                    title="Bienvenido a mi nuevo blog."
                     btn='Ir al blog'
                 />
                 <div className="center">
                     <div id="content">
-                        <h1 className="subheader">Ultimos articulos</h1>
+                        <h1 className="subheader">Ultimos articulos en entrada</h1>
                         <Articles 
                             home="true"    
                         />

@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import { Link } from 'react-router-dom'
 
 class Cancion extends Component {
 
@@ -19,7 +20,7 @@ class Cancion extends Component {
                 <span className="date">
                     {año}
                 </span>
-                <a href="article.html">Ver en Spotify</a>
+                <Link to="/blog">Ver en Spotify</Link>
                 <button onClick={this.marcar}>
                     Solicitar en cola
                 </button>
