@@ -1,4 +1,4 @@
-# aprendiendovue2
+# aprendiendovue
 
 ## Project setup
 ```
