@@ -1,29 +1,22 @@
 <template>
-  <div class="hello">
-    <h1>{{msg}}</h1>
-    <h2>{{texto}}</h2>
-    <MiComponente />
-  </div>
+  <section id="content">
+    <h2 class="subheader">{{ texto }}</h2>
+  </section>
 </template>
 
 <script>
-
-import MiComponente from './MiComponente.vue'
-
 export default {
-  name: 'HelloWorld',
-  components: {
-    MiComponente
-  },
+  name: "HelloWorld",
+  components: {},
   props: {
-    msg: String
+    msg: String,
   },
   data() {
     return {
-      texto: "jaja rancio"
-    }
-  }
-}
+      texto: "Hola mundo desde el componente",
+    };
+  },
+};
 </script>
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->

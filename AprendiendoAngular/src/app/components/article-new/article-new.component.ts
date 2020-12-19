@@ -62,7 +62,7 @@ export class ArticleNewComponent implements OnInit {
           this.status = 'success';
           this.article = response.article;
 
-          // Alerte de Sweet Alert 💗
+          // Sweet Alert 💗
           swal(
             'Articulo creado!',
             'El articulo se ha creado correctamente.',

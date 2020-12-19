@@ -38,7 +38,7 @@ export class ArticleComponent implements OnInit {
         },
         error => {
           console.log(error)
-          this._router.navigate(['/home'])
+          this._router.navigate(['**'])
         }
       );
     })

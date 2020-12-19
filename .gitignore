@@ -1,0 +1,9 @@
+# node modules 
+AprendiendoAngular/node_modules
+AprendiendoReact/node_modules
+aprendiendovue/node_modules
+
+Backend/node_modules
+
+debug.log
+.vscode

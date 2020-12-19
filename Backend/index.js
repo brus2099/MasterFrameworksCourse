@@ -6,8 +6,8 @@ var port = 3900
 
 mongoose.set('useFindAndModify', false);
 mongoose.Promise = global.Promise;
-//mongoose.connect('mongodb://localhost:27017/api_rest_blog', {useNewUrlParser: true})
-mongoose.connect('mongodb+srv://masterframeworks117:masterframeworks117@masterframeworks-articl.2adgp.mongodb.net/MasterFrameworks-Articles?retryWrites=true&w=majority', {useNewUrlParser: true})
+mongoose.connect('mongodb://localhost:27017/api_rest_blog', {useNewUrlParser: true})
+//mongoose.connect('mongodb+srv://masterframeworks117:masterframeworks117@masterframeworks-articl.2adgp.mongodb.net/MasterFrameworks-Articles?retryWrites=true&w=majority', {useNewUrlParser: true})
     .then( () => {
         console.log('Conexion sin problemas!');
 
